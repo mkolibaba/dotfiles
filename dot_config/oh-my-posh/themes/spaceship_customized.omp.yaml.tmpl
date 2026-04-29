@@ -1,0 +1,52 @@
+chezmoi:template:left-delimiter="#{{" right-delimiter=}}
+
+#{{ if eq .chezmoi.os "windows" }}
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+final_space: true
+version: 4
+console_title_template: '{{.Folder}}{{if .Root}} :: root{{end}} :: {{.Shell}}'
+maps:
+  user_name:
+    #{{ env "USERNAME" }}: 🍤
+    root: ⚡
+blocks:
+  - alignment: left
+    segments:
+      - foreground: lightYellow
+        style: plain
+        template: '{{ .UserName }} '
+        type: session
+      - foreground: cyan
+        options:
+          style: folder
+        style: plain
+        template: <#ffffff>in</> {{ .Path }}
+        type: path
+      - foreground: '#ff94df'
+        options:
+          branch_icon: ' <#ff94df><b>\ue0a0 </b></>'
+        style: plain
+        template: ' <#ffffff>on</>{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}'
+        type: git
+      - type: go
+        style: plain
+        foreground: cyan
+        template: " <#ffffff>via</> 🐹 {{ .Full }}"
+      - type: executiontime
+        style: plain
+        foreground: '#ffffff'
+        template: ' :: ⏳ {{ .FormattedMs }}'
+        options:
+          threshold: 500
+          style: austin
+          always_enabled: true
+    type: prompt
+  - alignment: left
+    newline: true
+    segments:
+      - foreground: lightGreen
+        style: plain
+        template: '❯'
+        type: text
+    type: prompt
+#{{ end }}
