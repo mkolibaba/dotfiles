@@ -32,6 +32,9 @@ oh-my-posh init nu --config ~/.config/oh-my-posh/themes/spaceship_customized.omp
 
 print $"Loading personal and system profiles took (((date now) - $start_date) | format duration ms)."
 
+# aliases
+alias cm = chezmoi
+
 # commands
 def posh [...params: string] {
     $params | str join " " | pwsh -c $in
