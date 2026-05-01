@@ -1,0 +1,7 @@
+[user]
+	name = mkolibaba
+	email = avierdaner@gmail.com
+[diff]
+    external = difft
+[core]
+	autocrlf = input
