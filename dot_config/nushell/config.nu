@@ -31,3 +31,8 @@ mkdir ($nu.data-dir | path join "vendor/autoload")
 oh-my-posh init nu --config ~/.config/oh-my-posh/themes/spaceship_customized.omp.yaml
 
 print $"Loading personal and system profiles took (((date now) - $start_date) | format duration ms)."
+
+# commands
+def posh [...params: string] {
+    $params | str join " " | pwsh -c $in
+}
