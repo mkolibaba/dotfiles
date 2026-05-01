@@ -3,6 +3,7 @@ $requiredTools = @(
     @{Name = "git"; Package = "Git.Git"}
     @{Name = "pwsh"; Package = "Microsoft.PowerShell"}
     @{Name = "wt"; Package = "Microsoft.WindowsTerminal"}
+    @{Name = "difft"; Package = "Wilfred.difftastic"}
 )
 
 foreach ($tool in $requiredTools) {
