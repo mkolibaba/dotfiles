@@ -1,0 +1,1 @@
+New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\AppData\Roaming\nushell\config.nu" -Target "$env:USERPROFILE\.config\nushell\config.nu"
