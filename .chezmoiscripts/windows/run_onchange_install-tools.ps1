@@ -1,7 +1,6 @@
 $requiredTools = @(
     @{Name = "mise"; Package = "jdx.mise"}
     @{Name = "oh-my-posh"; Package = "JanDeDobbeleer.OhMyPosh"}
-    @{Name = "difft"; Package = "Wilfred.difftastic"}
 )
 
 foreach ($tool in $requiredTools) {
