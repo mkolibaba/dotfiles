@@ -1,5 +1,6 @@
 $requiredTools = @(
     @{Name = "mise"; Package = "jdx.mise"}
+    @{Name = "oh-my-posh"; Package = "JanDeDobbeleer.OhMyPosh"}
 )
 
 foreach ($tool in $requiredTools) {
