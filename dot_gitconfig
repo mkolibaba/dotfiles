@@ -5,3 +5,5 @@
     external = difft
 [core]
 	autocrlf = input
+[includeIf "gitdir:~/projects/lenta/"]
+	path = ~/projects/lenta/.gitconfig

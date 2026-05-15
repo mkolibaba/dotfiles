@@ -1,0 +1,5 @@
+let key_path = '~/.config/chezmoi/key.txt'
+if not ($key_path | path exists) {
+    mkdir ($key_path | path dirname)
+    ^chezmoi age decrypt --output $key_path --passphrase "{{ .chezmoi.sourceDir }}/key.txt.age"
+}

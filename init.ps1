@@ -4,6 +4,7 @@ $requiredTools = @(
     @{Name = "pwsh"; Package = "Microsoft.PowerShell"}
     @{Name = "wt"; Package = "Microsoft.WindowsTerminal"}
     @{Name = "difft"; Package = "Wilfred.difftastic"}
+    @{Name = "nu"; Package = "Nushell.Nushell"}
 )
 
 foreach ($tool in $requiredTools) {
