@@ -1,0 +1,25 @@
+# MCP
+mcp add context7 --type http --url "https://mcp.context7.com/mcp"
+mcp add repowise --type stdio --command repowise --args mcp
+
+# Providers
+provider add polza --type openai-compat --base-url "https://polza.ai/api/v1" --api-key "${POLZA_API_KEY}"
+
+# Models
+model add polza/moonshotai/kimi-k2.5 --name "MoonshotAI: Kimi K2.5"
+model add polza/z-ai/glm-4.7-flash --name "Z.AI: GLM 4.7 Flash"
+model add polza/z-ai/glm-5 --name "Z.ai: GLM 5"
+model add polza/z-ai/glm-5.2 --name "Z.ai: GLM 5.2"
+model add polza/deepseek/deepseek-v4-flash --name "DeepSeek: DeepSeek V4 Flash"
+model add polza/qwen/qwen3.6-flash --name "Qwen: Qwen3.6 Flash"
+model add polza/qwen/qwen3.7-max --name "Qwen: Qwen3.7 Max"
+model add polza/moonshotai/kimi-k2.6 --name "MoonshotAI: Kimi K2.6"
+model add polza/nvidia/nemotron-3-ultra-550b-a55b --name "NVIDIA: Nemotron 3 Ultra"
+model add polza/openai/gpt-5.6-luna --name "OpenAI: GPT-5.6 Luna"
+model add polza/openai/gpt-5.6-terra --name "OpenAI: GPT-5.6 Terra"
+
+# Options
+option skill-path "~/.agents/skills"
+
+# Permissions
+permissions allow view ls grep edit mcp_context7_get-library-doc mcp_github_get_issue mcp_github_get_issue_comments multiedit write

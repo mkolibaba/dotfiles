@@ -1,6 +1,0 @@
-[tools]
-python = "latest"
-
-[env]
-EDITOR = "code"
-GITHUB_USERNAME = "mkolibaba"

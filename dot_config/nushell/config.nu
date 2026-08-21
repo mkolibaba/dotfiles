@@ -1,5 +1,6 @@
 # Disable default banner
 $env.config.show_banner = false
+
 # and print custom banner
 print $"Nushell (version | get version)"
 let $start_date = date now
@@ -13,6 +14,9 @@ oh-my-posh init nu --config ~/.config/oh-my-posh/themes/spaceship_customized.omp
 
 # zoxide
 zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
+
+# snip
+# source 'C:\Users\maksim.kolibaba\.amasia\nushell\config.nu'
 
 print $"Loading personal and system profiles took (((date now) - $start_date) | format duration ms)."
 
