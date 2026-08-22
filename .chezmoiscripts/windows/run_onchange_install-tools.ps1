@@ -6,6 +6,7 @@
     @{Name = "code"; Package = "Microsoft.VisualStudioCode"}
     @{Name = "age"; Package = "FiloSottile.age"}
     @{Name = "hx"; Package = "Helix.Helix"}
+    @{Name = "C:\Users\maxim\AppData\Local\Zellij\zellij"; Package = "Zellij.Zellij"}
 )
 
 Write-Host "🔮 Installing tools..." -ForegroundColor Yellow
