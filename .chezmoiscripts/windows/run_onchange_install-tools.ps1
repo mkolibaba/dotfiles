@@ -8,6 +8,7 @@ $requiredTools = @(
     @{Name = "hx"; Package = "Helix.Helix"}
 )
 
+Write-Host "🔮 Installing tools..." -ForegroundColor Yellow
 foreach ($tool in $requiredTools) {
     if (!(Get-Command $tool.Name -ErrorAction SilentlyContinue)) {
         Write-Host "Installing $($tool.Name)..." -ForegroundColor Yellow
@@ -49,6 +50,13 @@ $vsCodeExtensions = @(
     "weijunyu.vscode-json-path"
 )
 
+$installed = -split (code --list-extensions)
+
+Write-Host "🔮 Installing VS Code extensions..." -ForegroundColor Yellow
 foreach ($ext in $vsCodeExtensions) {
-    code --install-extension $ext
+    if ($installed -contains $ext) {
+        Write-Host "✅ $($ext) is already installed" -ForegroundColor Green
+    } else {
+        code --install-extension $ext
+    }
 }
