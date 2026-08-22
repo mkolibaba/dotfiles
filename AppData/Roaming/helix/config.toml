@@ -2,3 +2,7 @@ theme = "dracula"
 
 [editor.auto-save]
 after-delay.enable = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
