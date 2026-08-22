@@ -1,0 +1,73 @@
+{
+    "editor.fontFamily": "Fira Code Medium, Consolas, 'Courier New', monospace",
+    "editor.cursorStyle": "block",
+    "github.copilot.chat.newWorkspaceCreation.enabled": false,
+    "editor.unicodeHighlight.allowedLocales": {
+        "ru": true
+    },
+    "workbench.colorTheme": "Dracula Theme",
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.fontWeight": "500",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "files.autoGuessEncoding": true,
+    "git.autofetch": true,
+    "git.autofetchPeriod": 300,
+    "files.autoSaveDelay": 500,
+    "editor.fontLigatures": true,
+    "editor.showFoldingControls": "always",
+    "editor.fontSize": 17,
+    "docker.extension.enableComposeLanguageServer": false,
+    "editor.fontWeight": "normal",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.commandsToSkipShell": [
+        "kilo-code.new.agentManagerOpen",
+        "kilo-code.new.agentManager.showTerminal"
+    ],
+    "json.schemaDownload.trustedDomains": {
+        "https://developer.microsoft.com/json-schemas/": true,
+        "https://json-schema.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://models.dev": true,
+        "https://opencode.ai": true,
+        "https://raw.githubusercontent.com/devcontainers/spec/": true,
+        "https://raw.githubusercontent.com/microsoft/vscode/": true,
+        "https://schemastore.azurewebsites.net/": true,
+        "https://www.schemastore.org/": true,
+        "https://charm.land/*": true
+    },
+    "explorer.confirmDelete": false,
+    "git.confirmSync": false,
+    "terminal.integrated.profiles.windows": {
+        "Nushell": {
+            "path": "nu.exe"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Nushell",
+    "editor.allowVariableFonts": false,
+    "editor.allowVariableFontsInAccessibilityMode": true,
+    "editor.fontVariations": false,
+    "chat.disableAIFeatures": true,
+    "gopls": {
+        "ui.navigation.importShortcut": "Definition"
+    },
+    "go.testExplorer.showDynamicSubtestsInEditor": true,
+    "go.enableCodeLens": {
+        "references": true,
+        "runtest": true,
+    }
+}
