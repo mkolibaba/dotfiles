@@ -6,5 +6,6 @@ formatter = { command = "goimports" }
 [language-server.gopls]
 command = "gopls"
 args = ["-logfile=auto",  "serve"]
+
 [language-server.gopls.config]
 "ui.diagnostic.staticcheck" = true

@@ -1,1 +1,4 @@
 theme = "dracula"
+
+[editor.auto-save]
+after-delay.enable = true
