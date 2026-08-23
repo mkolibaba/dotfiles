@@ -81,6 +81,13 @@
                 "hidden": false,
                 "name": "Nushell",
                 "source": "nu"
+            },
+            {
+                "guid": "{5d9df7c9-0389-451a-be44-b3864f452ef5}",
+                "hidden": false,
+                "name": "Zellij",
+                "commandline": "zellij -l welcome",
+                "icon": "%UERPROFILE%\\.config\\wt\\favicon.ico"
             }
         ]
     },
