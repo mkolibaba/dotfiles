@@ -5,6 +5,7 @@ $requiredTools = @(
     @{Name = "wt"; Package = "Microsoft.WindowsTerminal"}
     @{Name = "difft"; Package = "Wilfred.difftastic"}
     @{Name = "nu"; Package = "Nushell.Nushell"}
+    @{Name = "bw"; Package = "Bitwarden.CLI"}
 )
 
 foreach ($tool in $requiredTools) {
@@ -21,3 +22,5 @@ foreach ($tool in $requiredTools) {
         Write-Host "$($tool.Name) is already installed" -ForegroundColor Green
     }
 }
+
+setx "BW_SESSION" (bw unlock --raw)
