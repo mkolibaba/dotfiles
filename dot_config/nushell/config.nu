@@ -42,3 +42,11 @@ def gitgone [] {
     # gently try to delete merged branches, excluding the checked out one
     git branch --merged | lines | where $it !~ '\*' | str trim | where $it != 'master' and $it != 'main' | each { |it| git branch -d $it }
 }
+
+def pill [] {
+    print "💊 This is your memory pill
+💻 Nushell commands
+- Alt+C - change directory (fzf supported)
+- Ctrl+R - history (fzf supported)
+- Ctrl+T - search files in current directory recursively (fzf supported)"
+}
