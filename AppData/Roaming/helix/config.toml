@@ -1,4 +1,4 @@
-theme = "kanagawa"
+theme = "dracula"
 
 [editor]
 shell = ["nu", "-c"]
@@ -12,3 +12,11 @@ other-lines = "error"
 
 [editor.file-picker]
 hidden = false
+
+[keys.normal]
+C-y = [
+  ':sh rm -f C:\unique-file',
+  ':insert-output yazi.exe %{buffer_name} --chooser-file=C:\unique-file',
+  ':open %sh{type C:\unique-file}',
+  ':redraw',
+]

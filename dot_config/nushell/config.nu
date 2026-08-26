@@ -1,5 +1,10 @@
-# Disable default banner
+# Environments
 $env.config.show_banner = false
+$env.config.buffer_editor = "hx"
+
+# Aliases
+alias cm = chezmoi
+alias cme = chezmoi edit --watch
 
 # and print custom banner
 print $"Nushell (version | get version)"
@@ -19,9 +24,6 @@ zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.
 # source 'C:\Users\maksim.kolibaba\.amasia\nushell\config.nu'
 
 print $"Loading personal and system profiles took (((date now) - $start_date) | format duration ms)."
-
-# aliases
-alias cm = chezmoi
 
 # commands
 def posh [...params: string] {
@@ -48,5 +50,8 @@ def pill [] {
 💻 Nushell commands
 - Alt+C - change directory (fzf supported)
 - Ctrl+R - history (fzf supported)
-- Ctrl+T - search files in current directory recursively (fzf supported)"
-}
+- Ctrl+T - search files in current directory recursively (fzf supported)
+🏡 Chezmoi commands:
+cm - alias for chezmoi
+chezmoi edit --watch <file> (cme <file>) - edit file and apply changes whenever it saved
+chezmoi edit - open source directory in editor"}
