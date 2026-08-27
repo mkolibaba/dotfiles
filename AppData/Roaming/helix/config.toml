@@ -1,10 +1,15 @@
 theme = "dracula"
 
 [editor]
+line-number = "relative"
+cursorline = true
+color-modes = true
+bufferline = "multiple"
 shell = ["nu", "-c"]
 
 [editor.auto-save]
 after-delay.enable = true
+after-delay.timeout = 2000
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
@@ -13,6 +18,9 @@ other-lines = "error"
 [editor.file-picker]
 hidden = false
 
+[editor.lsp]
+display-inlay-hints = true
+
 [keys.normal]
 C-y = [
   ':sh rm -f C:\unique-file',
@@ -20,3 +28,5 @@ C-y = [
   ':open %sh{type C:\unique-file}',
   ':redraw',
 ]
+A-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]

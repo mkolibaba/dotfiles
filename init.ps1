@@ -6,6 +6,7 @@ $requiredTools = @(
     @{Name = "difft"; Package = "Wilfred.difftastic"}
     @{Name = "nu"; Package = "Nushell.Nushell"}
     @{Name = "bw"; Package = "Bitwarden.CLI"}
+    @{Name = "mise"; Package = "jdx.mise"}
 )
 
 foreach ($tool in $requiredTools) {
@@ -26,3 +27,5 @@ foreach ($tool in $requiredTools) {
 setx "BW_SESSION" (bw unlock --raw)
 
 nu -c '(bw get item "chezmoi age key") | from json | get notes | save -f ~/.config/chezmoi/key.txt'
+
+mise install

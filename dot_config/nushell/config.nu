@@ -1,27 +1,21 @@
 # Environments
 $env.config.show_banner = false
 $env.config.buffer_editor = "hx"
+$env.Path = ($env.Path | prepend r#'~\AppData\Local\mise\shims'#) # mise activate nu --shims
 
 # Aliases
 alias cm = chezmoi
+alias cma = chezmoi apply
 alias cme = chezmoi edit --watch
 
-# and print custom banner
+# Print custom banner
 print $"Nushell (version | get version)"
 let $start_date = date now
 
-# Mise
-mkdir ($nu.data-dir | path join "vendor/autoload")
-^mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
-
-# oh-my-posh
-oh-my-posh init nu --config ~/.config/oh-my-posh/themes/spaceship_customized.omp.yaml
-
-# zoxide
-zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
-
-# snip
-# source 'C:\Users\maksim.kolibaba\.amasia\nushell\config.nu'
+# Autoload
+const autoload_dir = $nu.data-dir | path join "vendor" "autoload"
+mkdir $autoload_dir
+mise activate nu | save -f ($autoload_dir | path join "mise.nu")
 
 print $"Loading personal and system profiles took (((date now) - $start_date) | format duration ms)."
 
@@ -38,11 +32,6 @@ def --env refreshenv [] {
 
     let out = $user_path ++ $sys_path ++ $env.path | uniq --ignore-case
     $env.path = $out
-}
-
-def gitgone [] {
-    # gently try to delete merged branches, excluding the checked out one
-    git branch --merged | lines | where $it !~ '\*' | str trim | where $it != 'master' and $it != 'main' | each { |it| git branch -d $it }
 }
 
 def pill [] {

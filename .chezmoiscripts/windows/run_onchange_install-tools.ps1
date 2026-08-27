@@ -1,13 +1,7 @@
 ﻿$requiredTools = @(
-    @{Name = "mise"; Package = "jdx.mise"}
-    @{Name = "oh-my-posh"; Package = "JanDeDobbeleer.OhMyPosh"}
-    @{Name = "zoxide"; Package = "ajeetdsouza.zoxide"}
     @{Name = "C:\Program Files\Everything\Everything"; Package = "voidtools.Everything"}
     @{Name = "code"; Package = "Microsoft.VisualStudioCode"}
-    @{Name = "age"; Package = "FiloSottile.age"}
     @{Name = "hx"; Package = "Helix.Helix"}
-    @{Name = "C:\Users\maxim\AppData\Local\Zellij\zellij"; Package = "Zellij.Zellij"}
-    @{Name = "fzf"; Package = "junegunn.fzf"}
 )
 
 Write-Host "🔮 Installing tools..." -ForegroundColor Yellow
