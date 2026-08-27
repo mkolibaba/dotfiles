@@ -7,6 +7,7 @@ $env.Path = ($env.Path | prepend r#'~\AppData\Local\mise\shims'#) # mise activat
 alias cm = chezmoi
 alias cma = chezmoi apply
 alias cme = chezmoi edit --watch
+alias e = hx (fzf --preview "open --raw {}")
 
 # Print custom banner
 print $"Nushell (version | get version)"

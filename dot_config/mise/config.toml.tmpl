@@ -13,6 +13,7 @@ zoxide = { version = "latest", postinstall = "zoxide init nushell | save -f ($nu
 
 [env]
 EDITOR = "hx"
+SHELL = "nu"
 GITHUB_USERNAME = "mkolibaba"
 SOPS_AGE_KEY_FILE = "~/.config/sops/age/keys.txt"
 POLZA_API_KEY = "{{- (bitwarden "item" "Polza.ai API Key").notes -}}"
