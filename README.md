@@ -8,7 +8,5 @@ Invoke-RestMethod -Uri https://raw.githubusercontent.com/mkolibaba/dotfiles/main
 ```
 
 ## TODO
-- Podman init
 - Goland & IntelliJ configs & installation
-- VSCode configs
 - Fonts installation

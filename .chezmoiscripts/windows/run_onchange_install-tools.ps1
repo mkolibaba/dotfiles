@@ -1,7 +1,7 @@
 ﻿$requiredTools = @(
     @{Name = "C:\Program Files\Everything\Everything"; Package = "voidtools.Everything"}
     @{Name = "code"; Package = "Microsoft.VisualStudioCode"}
-    @{Name = "hx"; Package = "Helix.Helix"}
+    @{Name = "C:\Users\maxim\AppData\Local\Fork\current\Fork"; Package = "Fork.Fork"}
 )
 
 Write-Host "🔮 Installing tools..." -ForegroundColor Yellow
