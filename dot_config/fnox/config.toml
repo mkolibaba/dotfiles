@@ -1,0 +1,5 @@
+[providers]
+bitwarden = { type = "bitwarden" }
+
+[secrets]
+POLZA_API_KEY = { provider = "bitwarden", value = "Polza.ai API Key" }

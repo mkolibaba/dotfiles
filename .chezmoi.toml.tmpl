@@ -10,3 +10,7 @@ args = [
   "always",
   "--skip-unchanged"
 ]
+
+[hooks.apply.post]
+command = "mise"
+args = ["install"]

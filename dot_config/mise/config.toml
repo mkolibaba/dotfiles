@@ -1,23 +1,27 @@
 [tools]
-helix = "latest"
 age = "latest"
 crush = "latest"
+fnox = "latest"
 fzf = { version = "latest", postinstall = "fzf --nushell | save -f ($nu.data-dir | path join vendor autoload _fzf_integration.nu)" }
 go = "latest"
 golangci-lint = "latest"
 golangci-lint-langserver = "latest"
+helix = "latest"
 oh-my-posh = { version = "latest", postinstall = "oh-my-posh init nu --config ~/.config/oh-my-posh/themes/spaceship_customized.omp.yaml" }
 python = "latest"
+sops = "latest"
 zellij = "latest"
 zoxide = { version = "latest", postinstall = "zoxide init nushell | save -f ($nu.data-dir | path join vendor autoload zoxide.nu)" }
 
 [env]
+_.file = "~/.config/mise/secret.env"
 EDITOR = "hx"
 SHELL = "nu"
 GITHUB_USERNAME = "mkolibaba"
 SOPS_AGE_KEY_FILE = "~/.config/sops/age/keys.txt"
-POLZA_API_KEY = "{{- (bitwarden "item" "Polza.ai API Key").notes -}}"
 
 [settings]
+env_cache = true
+env_cache_ttl = "72h"
 windows_default_file_shell_args = "nu"
 windows_default_inline_shell_args = "nu -c"
