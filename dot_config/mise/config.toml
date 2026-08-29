@@ -6,6 +6,7 @@ fzf = { version = "latest", postinstall = "fzf --nushell | save -f ($nu.data-dir
 go = "latest"
 golangci-lint = "latest"
 golangci-lint-langserver = "latest"
+gsudo = "latest"
 helix = "latest"
 oh-my-posh = { version = "latest", postinstall = "oh-my-posh init nu --config ~/.config/oh-my-posh/themes/spaceship_customized.omp.yaml" }
 python = "latest"
