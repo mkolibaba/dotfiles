@@ -8,6 +8,8 @@ golangci-lint = "latest"
 golangci-lint-langserver = "latest"
 gsudo = "latest"
 helix = "latest"
+node = "latest"
+npm = "latest"
 oh-my-posh = { version = "latest", postinstall = "oh-my-posh init nu --config ~/.config/oh-my-posh/themes/spaceship_customized.omp.yaml" }
 python = "latest"
 sops = "latest"
