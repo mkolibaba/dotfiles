@@ -1,0 +1,6 @@
+[theme]
+name = "dracula"
+auto_switch = false
+
+[terminal]
+default_shell = "nu"

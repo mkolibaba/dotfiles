@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+final_space: true
+version: 4
+console_title_template: '{{.Folder}}{{if .Root}} :: root{{end}} :: {{.Shell}}'
+blocks:
+  - alignment: left
+    type: prompt
+    segments:
+      - foreground: cyan
+        options:
+          style: folder
+        style: plain
+        template: '{{ .Path }}'
+        type: path
+      - foreground: '#ff94df'
+        options:
+          branch_icon: " <#ff94df><b>\ue0a0 </b></>"
+        style: plain
+        template: ' <#ffffff>on</>{{ .HEAD }}{{ if .Working.Changed }} ({{ .Working.String }}){{ end }}'
+        type: git
+      - foreground: lightGreen
+        style: plain
+        template: ' ❯'
+        type: text
