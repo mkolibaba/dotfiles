@@ -16,6 +16,7 @@ oh-my-posh = { version = "latest", postinstall = "oh-my-posh init nu --config ~/
 pi = "latest"
 python = "latest"
 sops = "latest"
+yazi = "latest"
 zellij = "latest"
 zoxide = { version = "latest", postinstall = "zoxide init nushell | save -f ($nu.data-dir | path join vendor autoload zoxide.nu)" }
 
