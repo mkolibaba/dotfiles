@@ -6,14 +6,14 @@ cursorline = true
 color-modes = true
 bufferline = "multiple"
 shell = ["nu", "-c"]
+end-of-line-diagnostics = "hint"
 
 [editor.auto-save]
 after-delay.enable = true
 after-delay.timeout = 2000
 
-[editor.inline-diagnostics]
-cursor-line = "warning"
-other-lines = "error"
+[editor.statusline]
+right = ["diagnostics", "selections", "register", "position", "file-encoding", "version-control"]
 
 [editor.file-picker]
 hidden = false
@@ -30,3 +30,5 @@ C-y = [
 ]
 A-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+"S-ret" = "goto_word"
+"ret" = "repeat_last_motion"

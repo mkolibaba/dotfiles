@@ -28,4 +28,4 @@ setx "BW_SESSION" (bw unlock --raw)
 
 nu -c '(bw get item "chezmoi age key") | from json | get notes | save -f ~/.config/chezmoi/key.txt'
 
-mise install
+mise bootstrap

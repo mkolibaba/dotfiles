@@ -7,3 +7,21 @@
 	autocrlf = input
 [includeIf "gitdir:~/projects/lenta/"]
 	path = ~/projects/lenta/.gitconfig
+[alias]
+	changed = status -s
+	branches = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative))%(color:reset) %(color:magenta)[%(authorname)]%(color:reset)' --sort=-committerdate
+	lore = log --pretty=format:'%C(yellow)%h%Creset -%C(blue)%d%Creset %s %C(green)(%cr) %C(magenta)[%an]%Creset' --abbrev-commit -30
+	erase = restore
+	cm = commit -m
+	cam = commit -a -m
+	d = diff
+	ds = diff --stat
+	co = checkout
+	cob = checkout -b
+	del = branch -D
+	a = add
+	ap = add -p
+	aa = add -A
+	undo = reset HEAD~1 --mixed
+	res = reset --hard
+	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit

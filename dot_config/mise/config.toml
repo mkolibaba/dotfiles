@@ -27,6 +27,11 @@ SHELL = "nu"
 GITHUB_USERNAME = "mkolibaba"
 SOPS_AGE_KEY_FILE = "~/.config/sops/age/keys.txt"
 
+[bootstrap.packages]
+"winget:voidtools.Everything" = "latest"
+"winget:Microsoft.VisualStudioCode" = "latest"
+"winget:Fork.Fork" = "latest"
+
 [settings]
 env_cache = true
 env_cache_ttl = "72h"
