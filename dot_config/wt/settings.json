@@ -59,7 +59,7 @@
             "cursorShape": "filledBox",
             "font": {
                 "face": "FiraCode Nerd Font",
-                "size": 15,
+                "size": 12,
                 "weight": "medium"
             }
         },

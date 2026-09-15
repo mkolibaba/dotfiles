@@ -9,4 +9,3 @@ Invoke-RestMethod -Uri https://raw.githubusercontent.com/mkolibaba/dotfiles/main
 
 ## TODO
 - Goland & IntelliJ configs & installation
-- Fonts installation
