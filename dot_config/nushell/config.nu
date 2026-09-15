@@ -22,7 +22,7 @@ print $"Loading personal and system profiles took (((date now) - $start_date) | 
 
 # Git
 def "git select" [] {
-  git status -s | gum choose --no-limit | lines | str replace -r '(M\s+)|(\?\?\s+)' '' | each {|it| git add $it} | ignore
+  git status -s | gum choose --no-limit | lines | str replace -r '(M+\s+)|(\?\?\s+)' '' | each {|it| git add $it} | ignore
 }
 
 # commands
