@@ -6,7 +6,7 @@ $env.Path = ($env.Path | prepend r#'~\AppData\Local\mise\shims'#) # mise activat
 # Aliases
 alias cm = chezmoi
 alias cma = chezmoi apply
-alias cme = chezmoi edit --watch
+alias cme = chezmoi edit
 alias e = hx (fzf --preview "open --raw {}")
 
 # Print custom banner
@@ -58,5 +58,5 @@ def pill [] {
 - Ctrl+T - search files in current directory recursively (fzf supported)
 🏡 Chezmoi commands:
 cm - alias for chezmoi
-chezmoi edit --watch <file> (cme <file>) - edit file and apply changes whenever it saved
+chezmoi edit <file> (cme <file>) - edit file
 chezmoi edit - open source directory in editor"}
