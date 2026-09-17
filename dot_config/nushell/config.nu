@@ -18,6 +18,9 @@ const autoload_dir = $nu.data-dir | path join "vendor" "autoload"
 mkdir $autoload_dir
 mise activate nu | save -f ($autoload_dir | path join "mise.nu")
 
+# TODO: can it be autoloaded?
+source $"($nu.cache-dir)/carapace.nu"
+
 print $"Loading personal and system profiles took (((date now) - $start_date) | format duration ms)."
 
 # Git
