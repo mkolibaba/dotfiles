@@ -16,6 +16,7 @@ npm = "latest"
 oh-my-posh = { version = "latest", postinstall = "oh-my-posh init nu --config ~/.config/oh-my-posh/themes/mkolibaba.omp.yaml" }
 pi = "latest"
 python = "latest"
+"github:repowise-dev/repowise" = "latest"
 sops = "latest"
 yazi = "latest"
 zellij = "latest"
