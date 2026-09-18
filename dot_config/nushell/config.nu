@@ -33,6 +33,14 @@ def posh [...params: string] {
     $params | str join " " | pwsh -c $in
 }
 
+def search-replace [
+  pattern: string,
+  old: string,
+  new: string
+] {
+  ls $pattern | each { |it| open --raw $it.name | str replace --all old new | save -f $it.name } | ignore
+}
+
 def --env refreshenv [] {
     let user_path = registry query --hkcu environment | where name == Path | get value | split row ';' |
          where { |x| $x != '' }
