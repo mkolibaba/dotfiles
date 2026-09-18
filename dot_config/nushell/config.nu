@@ -38,7 +38,7 @@ def search-replace [
   old: string,
   new: string
 ] {
-  ls $pattern | each { |it| open --raw $it.name | str replace --all old new | save -f $it.name } | ignore
+  ls $pattern | each { |it| open --raw $it.name | str replace --all $old $new | save -f $it.name } | ignore
 }
 
 def --env refreshenv [] {
