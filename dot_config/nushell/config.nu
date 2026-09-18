@@ -34,7 +34,7 @@ def posh [...params: string] {
 }
 
 def search-replace [
-  pattern: string,
+  pattern: glob,
   old: string,
   new: string
 ] {
