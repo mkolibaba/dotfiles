@@ -20,6 +20,7 @@ mise activate nu | save -f ($autoload_dir | path join "mise.nu")
 
 # TODO: can it be autoloaded?
 source $"($nu.cache-dir)/carapace.nu"
+source ~/.local/share/atuin/init.nu
 
 print $"Loading personal and system profiles took (((date now) - $start_date) | format duration ms)."
 
