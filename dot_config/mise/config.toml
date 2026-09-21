@@ -1,6 +1,12 @@
 [tools]
 age = "latest"
-atuin = "latest"
+atuin = {
+  version = "latest",
+  postinstall = '''
+  mkdir ~/.local/share/atuin
+  atuin init nu | save ~/.local/share/atuin/init.nu   
+  '''
+}
 carapace = {
   version = "latest",
   postinstall = '''
