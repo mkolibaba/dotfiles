@@ -7,6 +7,7 @@ atuin = {
   atuin init nu | save ~/.local/share/atuin/init.nu   
   '''
 }
+bat = "latest"
 carapace = {
   version = "latest",
   postinstall = '''
@@ -31,6 +32,8 @@ npm = "latest"
 oh-my-posh = { version = "latest", postinstall = "oh-my-posh init nu --config ~/.config/oh-my-posh/themes/mkolibaba.omp.yaml" }
 pi = "latest"
 python = "latest"
+ripgrep = "latest"
+sd = "latest"
 sops = "latest"
 yazi = "latest"
 zellij = "latest"
