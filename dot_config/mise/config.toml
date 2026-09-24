@@ -37,6 +37,7 @@ python = "latest"
 ripgrep = "latest"
 sd = "latest"
 sops = "latest"
+tombi = "latest"
 yazi = "latest"
 zellij = "latest"
 zoxide = { version = "latest", postinstall = "zoxide init nushell | save -f ($nu.data-dir | path join vendor autoload zoxide.nu)" }
