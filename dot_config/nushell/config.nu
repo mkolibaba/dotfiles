@@ -29,6 +29,16 @@ def "git select" [] {
   git status -s | gum filter --no-limit | lines | str replace -r '(.+)\s+(.+)' '$2' | each {|it| git add $it} | ignore
 }
 
+def "git cc" [] {
+  let type = gum filter "fix" "feat" "docs" "style" "refactor" "test" "chore" "revert"
+  mut scope = gum input --placeholder "scope"
+  if $scope != "" {
+    $scope = $"\(($scope)\)"
+  }
+  let summary = gum input --value $"($type)($scope): " --placeholder "Summary of this change"
+  gum confirm $"Commit with message \"($summary)\"?"; git commit -m $summary
+}
+
 # commands
 def posh [...params: string] {
     $params | str join " " | pwsh -c $in
