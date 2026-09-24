@@ -20,6 +20,7 @@ crush = "latest"
 dua = "latest"
 fnox = "latest"
 fzf = { version = "latest", postinstall = "fzf --nushell | save -f ($nu.data-dir | path join vendor autoload _fzf_integration.nu)" }
+glow = "latest"
 go = "latest"
 golangci-lint = "latest"
 golangci-lint-langserver = "latest"
