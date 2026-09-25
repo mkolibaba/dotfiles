@@ -4,7 +4,6 @@ atuin = { version = "latest", postinstall = '''
   mkdir ~/.local/share/atuin
   atuin init nu | save -f ~/.local/share/atuin/init.nu   
   ''' }
-bat = "latest"
 carapace = { version = "latest", postinstall = '''
   $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
   mkdir $"($nu.cache-dir)"
@@ -31,7 +30,6 @@ python = "latest"
 sd = "latest"
 sops = "latest"
 tombi = "latest"
-yazi = "latest"
 zoxide = { version = "latest", postinstall = "zoxide init nushell | save -f ($nu.data-dir | path join vendor autoload zoxide.nu)" }
 
 [env]
@@ -87,6 +85,8 @@ $vsCodeExtensions | each { |e|
 "scoop:nerd-fonts/JetBrainsMono-NF" = "latest"
 "scoop:ripgrep" = "latest"
 "scoop:zellij" = "latest"
+"scoop:yazi" = "latest"
+"scoop:bat" = "latest"
 
 [bootstrap.hooks.final]
 run = '''
