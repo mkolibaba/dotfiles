@@ -28,12 +28,10 @@ npm = "latest"
 oh-my-posh = { version = "latest", postinstall = "oh-my-posh init nu --config ~/.config/oh-my-posh/themes/mkolibaba.omp.yaml" }
 pi = "latest"
 python = "latest"
-ripgrep = "latest"
 sd = "latest"
 sops = "latest"
 tombi = "latest"
 yazi = "latest"
-zellij = "latest"
 zoxide = { version = "latest", postinstall = "zoxide init nushell | save -f ($nu.data-dir | path join vendor autoload zoxide.nu)" }
 
 [env]
@@ -87,6 +85,8 @@ $vsCodeExtensions | each { |e|
 "winget:Fork.Fork" = "latest"
 "scoop:nerd-fonts/FiraCode-NF" = "latest"
 "scoop:nerd-fonts/JetBrainsMono-NF" = "latest"
+"scoop:ripgrep" = "latest"
+"scoop:zellij" = "latest"
 
 [bootstrap.hooks.final]
 run = '''
