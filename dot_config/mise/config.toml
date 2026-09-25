@@ -1,21 +1,10 @@
 [tools]
-atuin = { version = "latest", postinstall = '''
-  mkdir ~/.local/share/atuin
-  atuin init nu | save -f ~/.local/share/atuin/init.nu   
-  ''' }
-carapace = { version = "latest", postinstall = '''
-  $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
-  mkdir $"($nu.cache-dir)"
-  carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
-  ''' }
-fzf = { version = "latest", postinstall = "fzf --nushell | save -f ($nu.data-dir | path join vendor autoload _fzf_integration.nu)" }
 go = "latest"
 golangci-lint = "latest"
 golangci-lint-langserver = "latest"
 gsudo = "latest"
 node = "latest"
 npm = "latest"
-oh-my-posh = { version = "latest", postinstall = "oh-my-posh init nu --config ~/.config/oh-my-posh/themes/mkolibaba.omp.yaml" }
 python = "latest"
 tombi = "latest"
 zoxide = { version = "latest", postinstall = "zoxide init nushell | save -f ($nu.data-dir | path join vendor autoload zoxide.nu)" }
@@ -66,32 +55,51 @@ $vsCodeExtensions | each { |e|
 } | ignore'''
 
 [bootstrap.packages]
-"winget:voidtools.Everything" = "latest"
-"winget:Microsoft.VisualStudioCode" = "latest"
-"winget:Fork.Fork" = "latest"
+"scoop:atuin" = "latest"
+"scoop:bat" = "latest"
+"scoop:charm-gum" = "latest"
+"scoop:crush" = "latest"
+"scoop:difftastic" = "latest"
+"scoop:dua" = "latest"
+"scoop:extras/age" = "latest"
+"scoop:extras/carapace-bin" = "latest"
+"scoop:fnox" = "latest"
+"scoop:fzf" = "latest"
+"scoop:glow" = "latest"
+"scoop:helix" = "latest"
+"scoop:herdr" = "latest"
+"scoop:hunk" = "latest"
 "scoop:nerd-fonts/FiraCode-NF" = "latest"
 "scoop:nerd-fonts/JetBrainsMono-NF" = "latest"
+"scoop:oh-my-posh" = "latest"
 "scoop:ripgrep" = "latest"
-"scoop:zellij" = "latest"
-"scoop:yazi" = "latest"
-"scoop:bat" = "latest"
-"scoop:extras/age" = "latest"
-"scoop:herdr" = "latest"
-"scoop:charm-gum" = "latest"
-"scoop:glow" = "latest"
-"scoop:hunk" = "latest"
-"scoop:dua" = "latest"
 "scoop:sd" = "latest"
 "scoop:sops" = "latest"
-"scoop:fnox" = "latest"
-"scoop:helix" = "latest"
-"scoop:crush" = "latest"
+"scoop:yazi" = "latest"
+"scoop:zellij" = "latest"
+"winget:Fork.Fork" = "latest"
+"winget:Microsoft.VisualStudioCode" = "latest"
+"winget:voidtools.Everything" = "latest"
+
+[bootstrap.hooks.pre-packages]
+run = "scoop bucket add charm https://github.com/charmbracelet/scoop-bucket.git"
 
 [bootstrap.hooks.final]
 run = '''
 const autoload_dir = $nu.data-dir | path join "vendor" "autoload"
 mkdir $autoload_dir
 mise activate nu | save -f ($autoload_dir | path join "mise.nu")
+
+fzf --nushell | save -f ($nu.data-dir | path join vendor autoload _fzf_integration.nu)
+
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
+mkdir $"($nu.cache-dir)"
+carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
+
+oh-my-posh init nu --config ~/.config/oh-my-posh/themes/mkolibaba.omp.yaml
+
+mkdir ~/.local/share/atuin
+atuin init nu | save -f ~/.local/share/atuin/init.nu   
 '''
 
 [bootstrap.services.mise-history]
