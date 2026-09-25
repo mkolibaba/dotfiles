@@ -25,7 +25,6 @@ hunk = "latest"
 node = "latest"
 npm = "latest"
 oh-my-posh = { version = "latest", postinstall = "oh-my-posh init nu --config ~/.config/oh-my-posh/themes/mkolibaba.omp.yaml" }
-pi = "latest"
 python = "latest"
 sd = "latest"
 sops = "latest"
