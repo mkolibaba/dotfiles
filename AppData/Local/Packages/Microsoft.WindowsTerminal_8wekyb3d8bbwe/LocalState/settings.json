@@ -87,7 +87,7 @@
                 "hidden": false,
                 "name": "Zellij",
                 "commandline": "zellij -l welcome",
-                "icon": "%UERPROFILE%\\.config\\wt\\favicon.ico"
+                "icon": "favicon.ico"
             }
         ]
     },
