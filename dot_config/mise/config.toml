@@ -108,6 +108,8 @@ windows_default_inline_shell_args = "nu -c"
 "~/.config/fnox/config.toml" = { mode = "track" }
 "~/.config/mise/config.toml" = { mode = "track" }
 "~/.config/oh-my-posh/themes/mkolibaba.omp.yaml" = { mode = "track" }
+"~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/favicon-zellij.ico" = { mode = "track" }
+"~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json" = { mode = "track" }
 "~/AppData/Roaming/Code/User/settings.json" = { mode = "track" }
 "~/AppData/Roaming/helix/config.toml" = { mode = "track" }
 "~/AppData/Roaming/helix/languages.toml" = { mode = "track" }
