@@ -105,4 +105,10 @@ windows_default_inline_shell_args = "nu -c"
 
 [dotfiles]
 "~/.config/crush/crushrc" = { mode = "track" }
+"~/.config/fnox/config.toml" = { mode = "track" }
 "~/.config/mise/config.toml" = { mode = "track" }
+"~/.config/oh-my-posh/themes/mkolibaba.omp.yaml" = { mode = "track" }
+"~/AppData/Roaming/Code/User/settings.json" = { mode = "track" }
+"~/AppData/Roaming/helix/config.toml" = { mode = "track" }
+"~/AppData/Roaming/helix/languages.toml" = { mode = "track" }
+"~/AppData/Roaming/herdr/config.toml" = { mode = "track" }
