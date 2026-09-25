@@ -79,7 +79,7 @@ $vsCodeExtensions | each { |e|
     } else {
         ^code --install-extension $e
     }
-}'''
+} | ignore'''
 
 [bootstrap.packages]
 "winget:voidtools.Everything" = "latest"
