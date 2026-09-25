@@ -8,20 +8,15 @@ carapace = { version = "latest", postinstall = '''
   mkdir $"($nu.cache-dir)"
   carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
   ''' }
-crush = "latest"
-fnox = "latest"
 fzf = { version = "latest", postinstall = "fzf --nushell | save -f ($nu.data-dir | path join vendor autoload _fzf_integration.nu)" }
 go = "latest"
 golangci-lint = "latest"
 golangci-lint-langserver = "latest"
 gsudo = "latest"
-helix = "latest"
 node = "latest"
 npm = "latest"
 oh-my-posh = { version = "latest", postinstall = "oh-my-posh init nu --config ~/.config/oh-my-posh/themes/mkolibaba.omp.yaml" }
 python = "latest"
-sd = "latest"
-sops = "latest"
 tombi = "latest"
 zoxide = { version = "latest", postinstall = "zoxide init nushell | save -f ($nu.data-dir | path join vendor autoload zoxide.nu)" }
 
@@ -86,6 +81,11 @@ $vsCodeExtensions | each { |e|
 "scoop:glow" = "latest"
 "scoop:hunk" = "latest"
 "scoop:dua" = "latest"
+"scoop:sd" = "latest"
+"scoop:sops" = "latest"
+"scoop:fnox" = "latest"
+"scoop:helix" = "latest"
+"scoop:charmbracelet_scoop-bucket/crush" = "latest"
 
 [bootstrap.hooks.final]
 run = '''
