@@ -1,21 +1,15 @@
 [tools]
 age = "latest"
-atuin = {
-  version = "latest",
-  postinstall = '''
+atuin = { version = "latest", postinstall = '''
   mkdir ~/.local/share/atuin
   atuin init nu | save -f ~/.local/share/atuin/init.nu   
-  '''
-}
+  ''' }
 bat = "latest"
-carapace = {
-  version = "latest",
-  postinstall = '''
+carapace = { version = "latest", postinstall = '''
   $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
   mkdir $"($nu.cache-dir)"
   carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
-  '''
-}
+  ''' }
 crush = "latest"
 dua = "latest"
 fnox = "latest"
@@ -49,13 +43,67 @@ SHELL = "nu"
 GITHUB_USERNAME = "mkolibaba"
 SOPS_AGE_KEY_FILE = "~/.config/sops/age/keys.txt"
 
+[bootstrap.hooks.post-packages]
+run = '''
+let vsCodeExtensions = [
+    "andrewbutson.vscode-openapi-viewer",
+    "bcwsea.theme-saga",
+    "beardedbear.beardedicons",
+    "davidmarek.jsonpath-extract",
+    "docker.docker",
+    "dracula-theme.theme-dracula",
+    "editorconfig.editorconfig",
+    "fabianreyes.smart-json-schema",
+    "github.github-vscode-theme",
+    "golang.go",
+    "grapecity.gc-excelviewer",
+    "k--kato.intellij-idea-keybindings",
+    "maattdd.gitless",
+    "pkief.material-icon-theme",
+    "redhat.vscode-xml",
+    "redhat.vscode-yaml",
+    "sangsoonam.vscode-extension-quick-grep",
+    "tamasfe.even-better-toml",
+    "thenuprojectcontributors.vscode-nushell-lang",
+    "tinkertrain.theme-panda",
+    "weijunyu.vscode-json-path"
+]
+
+let installed = ^code --list-extensions | lines
+
+print $"(ansi yellow)🔮 Installing VS Code extensions...(ansi reset)"
+
+$vsCodeExtensions | each { |e|
+    if $e in $installed {
+        print $"✅ (ansi green)($e) is already installed(ansi reset)"
+    } else {
+        ^code --install-extension $e
+    }
+}'''
+
 [bootstrap.packages]
 "winget:voidtools.Everything" = "latest"
 "winget:Microsoft.VisualStudioCode" = "latest"
 "winget:Fork.Fork" = "latest"
+"scoop:nerd-fonts/FiraCode-NF" = "latest"
+"scoop:nerd-fonts/JetBrainsMono-NF" = "latest"
+
+[bootstrap.hooks.final]
+run = '''
+const autoload_dir = $nu.data-dir | path join "vendor" "autoload"
+mkdir $autoload_dir
+mise activate nu | save -f ($autoload_dir | path join "mise.nu")
+'''
+
+[bootstrap.services.mise-history]
+builtin = "history-watch"
 
 [settings]
 env_cache = true
 env_cache_ttl = "72h"
 windows_default_file_shell_args = "nu"
 windows_default_inline_shell_args = "nu -c"
+
+[dotfiles]
+"~/.config/crush/crushrc" = { mode = "track" }
+"~/.config/mise/config.toml" = { mode = "track" }
