@@ -1,5 +1,4 @@
 [tools]
-age = "latest"
 atuin = { version = "latest", postinstall = '''
   mkdir ~/.local/share/atuin
   atuin init nu | save -f ~/.local/share/atuin/init.nu   
@@ -10,18 +9,13 @@ carapace = { version = "latest", postinstall = '''
   carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
   ''' }
 crush = "latest"
-dua = "latest"
 fnox = "latest"
 fzf = { version = "latest", postinstall = "fzf --nushell | save -f ($nu.data-dir | path join vendor autoload _fzf_integration.nu)" }
-glow = "latest"
 go = "latest"
 golangci-lint = "latest"
 golangci-lint-langserver = "latest"
 gsudo = "latest"
-gum = "latest"
 helix = "latest"
-"github:herdrdev/herdr" = "latest"
-hunk = "latest"
 node = "latest"
 npm = "latest"
 oh-my-posh = { version = "latest", postinstall = "oh-my-posh init nu --config ~/.config/oh-my-posh/themes/mkolibaba.omp.yaml" }
@@ -86,6 +80,12 @@ $vsCodeExtensions | each { |e|
 "scoop:zellij" = "latest"
 "scoop:yazi" = "latest"
 "scoop:bat" = "latest"
+"scoop:age" = "latest"
+"scoop:herdr" = "latest"
+"scoop:charm-gum" = "latest"
+"scoop:glow" = "latest"
+"scoop:hunk" = "latest"
+"scoop:dua" = "latest"
 
 [bootstrap.hooks.final]
 run = '''
