@@ -75,7 +75,7 @@ $vsCodeExtensions | each { |e|
 "scoop:zellij" = "latest"
 "scoop:yazi" = "latest"
 "scoop:bat" = "latest"
-"scoop:age" = "latest"
+"scoop:extras/age" = "latest"
 "scoop:herdr" = "latest"
 "scoop:charm-gum" = "latest"
 "scoop:glow" = "latest"
