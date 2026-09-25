@@ -85,7 +85,7 @@ $vsCodeExtensions | each { |e|
 "scoop:sops" = "latest"
 "scoop:fnox" = "latest"
 "scoop:helix" = "latest"
-"scoop:charmbracelet_scoop-bucket/crush" = "latest"
+"scoop:crush" = "latest"
 
 [bootstrap.hooks.final]
 run = '''
