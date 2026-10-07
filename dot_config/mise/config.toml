@@ -54,7 +54,6 @@ $vsCodeExtensions | each { |e|
 [bootstrap.packages]
 "scoop:atuin" = "latest"
 "scoop:bat" = "latest"
-"scoop:bitwarden-cli" = "latest"
 "scoop:charm-gum" = "latest"
 "scoop:crush" = "latest"
 "scoop:difftastic" = "latest"

@@ -1,6 +1,7 @@
 # Environments
 $env.config.show_banner = false
 $env.config.buffer_editor = "hx"
+$env.config.table.mode = "frameless"
 $env.Path = ($env.Path | prepend r#'~\AppData\Local\mise\shims'#) # mise activate nu --shims
 $env.BAT_THEME = "Dracula"
 $env.DFT_WIDTH = 150
