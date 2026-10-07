@@ -1,9 +1,11 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": [
+    "actions": 
+    [
         {
-            "command": {
+            "command": 
+            {
                 "action": "copy",
                 "singleLine": false
             },
@@ -18,7 +20,8 @@
             "id": "User.find"
         },
         {
-            "command": {
+            "command": 
+            {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
@@ -29,7 +32,8 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
-    "keybindings": [
+    "keybindings": 
+    [
         {
             "id": "User.copy.644BA8F2",
             "keys": "ctrl+c"
@@ -48,22 +52,27 @@
         }
     ],
     "launchMode": "maximized",
-    "newTabMenu": [
+    "newTabMenu": 
+    [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": {
-        "defaults": {
+    "profiles": 
+    {
+        "defaults": 
+        {
             "colorScheme": "Dracula",
             "cursorShape": "filledBox",
-            "font": {
+            "font": 
+            {
                 "face": "FiraCode Nerd Font",
                 "size": 12,
                 "weight": "medium"
             }
         },
-        "list": [
+        "list": 
+        [
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
@@ -77,23 +86,71 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
+                "commandline": "nu",
                 "guid": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
                 "hidden": false,
+                "icon": "favicon-nushell.png",
                 "name": "Nushell",
-                "source": "nu"
+                "startingDirectory": "%USERPROFILE%"
             },
             {
+                "commandline": "zellij -l welcome",
                 "guid": "{5d9df7c9-0389-451a-be44-b3864f452ef5}",
                 "hidden": false,
-                "name": "Zellij",
-                "commandline": "zellij -l welcome",
-                "icon": "favicon-zellij.ico"
+                "icon": "favicon-zellij.ico",
+                "name": "Zellij"
             }
         ]
     },
-    "schemes": [
+    "schemes": 
+    [
         {
-            "name": "Dracula",
+            "background": "#303446",
+            "black": "#51576D",
+            "blue": "#8CAAEE",
+            "brightBlack": "#626880",
+            "brightBlue": "#8CAAEE",
+            "brightCyan": "#81C8BE",
+            "brightGreen": "#A6D189",
+            "brightPurple": "#F4B8E4",
+            "brightRed": "#E78284",
+            "brightWhite": "#A5ADCE",
+            "brightYellow": "#E5C890",
+            "cursorColor": "#F2D5CF",
+            "cyan": "#81C8BE",
+            "foreground": "#C6D0F5",
+            "green": "#A6D189",
+            "name": "Catppuccin Frappe",
+            "purple": "#F4B8E4",
+            "red": "#E78284",
+            "selectionBackground": "#626880",
+            "white": "#B5BFE2",
+            "yellow": "#E5C890"
+        },
+        {
+            "background": "#1E1E2E",
+            "black": "#45475A",
+            "blue": "#89B4FA",
+            "brightBlack": "#585B70",
+            "brightBlue": "#89B4FA",
+            "brightCyan": "#94E2D5",
+            "brightGreen": "#A6E3A1",
+            "brightPurple": "#F5C2E7",
+            "brightRed": "#F38BA8",
+            "brightWhite": "#A6ADC8",
+            "brightYellow": "#F9E2AF",
+            "cursorColor": "#F5E0DC",
+            "cyan": "#94E2D5",
+            "foreground": "#CDD6F4",
+            "green": "#A6E3A1",
+            "name": "Catppuccin Mocha",
+            "purple": "#F5C2E7",
+            "red": "#F38BA8",
+            "selectionBackground": "#585B70",
+            "white": "#BAC2DE",
+            "yellow": "#F9E2AF"
+        },
+        {
             "background": "#282A36",
             "black": "#21222C",
             "blue": "#BD93F9",
@@ -109,88 +166,60 @@
             "cyan": "#8BE9FD",
             "foreground": "#F8F8F2",
             "green": "#50FA7B",
+            "name": "Dracula",
             "purple": "#FF79C6",
             "red": "#FF5555",
             "selectionBackground": "#44475A",
             "white": "#F8F8F2",
             "yellow": "#F1FA8C"
-        },
-        {
-            "name": "Catppuccin Frappe",
-            "cursorColor": "#F2D5CF",
-            "selectionBackground": "#626880",
-            "background": "#303446",
-            "foreground": "#C6D0F5",
-            "black": "#51576D",
-            "red": "#E78284",
-            "green": "#A6D189",
-            "yellow": "#E5C890",
-            "blue": "#8CAAEE",
-            "purple": "#F4B8E4",
-            "cyan": "#81C8BE",
-            "white": "#B5BFE2",
-            "brightBlack": "#626880",
-            "brightRed": "#E78284",
-            "brightGreen": "#A6D189",
-            "brightYellow": "#E5C890",
-            "brightBlue": "#8CAAEE",
-            "brightPurple": "#F4B8E4",
-            "brightCyan": "#81C8BE",
-            "brightWhite": "#A5ADCE"
-        },
-        {
-            "name": "Catppuccin Mocha",
-            "cursorColor": "#F5E0DC",
-            "selectionBackground": "#585B70",
-            "background": "#1E1E2E",
-            "foreground": "#CDD6F4",
-            "black": "#45475A",
-            "red": "#F38BA8",
-            "green": "#A6E3A1",
-            "yellow": "#F9E2AF",
-            "blue": "#89B4FA",
-            "purple": "#F5C2E7",
-            "cyan": "#94E2D5",
-            "white": "#BAC2DE",
-            "brightBlack": "#585B70",
-            "brightRed": "#F38BA8",
-            "brightGreen": "#A6E3A1",
-            "brightYellow": "#F9E2AF",
-            "brightBlue": "#89B4FA",
-            "brightPurple": "#F5C2E7",
-            "brightCyan": "#94E2D5",
-            "brightWhite": "#A6ADC8"
         }
     ],
-    "themes": [
+    "themes": 
+    [
         {
             "name": "Catppuccin Frappe",
-            "tab": {
+            "tab": 
+            {
                 "background": "#303446FF",
+                "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "tabRow": {
+            "tabRow": 
+            {
                 "background": "#292C3CFF",
                 "unfocusedBackground": "#232634FF"
             },
-            "window": {
-                "applicationTheme": "dark"
+            "window": 
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
             }
         },
         {
             "name": "Catppuccin Mocha",
-            "tab": {
+            "tab": 
+            {
                 "background": "#1E1E2EFF",
+                "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "tabRow": {
+            "tabRow": 
+            {
                 "background": "#181825FF",
                 "unfocusedBackground": "#11111BFF"
             },
-            "window": {
-                "applicationTheme": "dark"
+            "window": 
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
             }
         }
     ]
