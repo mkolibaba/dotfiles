@@ -7,3 +7,7 @@ Documents/PowerShell
 AppData
 .chezmoiscripts/windows
 {{ end }}
+
+{{ if not (eq .chezmoi.os "darwin" "linux") }}
+.config/Code
+{{ end }}
