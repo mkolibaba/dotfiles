@@ -3,6 +3,15 @@ name = "go"
 auto-format = true
 formatter = { command = "goimports" }
 
+[[language]]
+name = "gotmpl"
+scope = "source.gotmpl"
+injection-regex = "gotmpl"
+file-types = ["gotmpl", "tmpl"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = ["gopls","vscode-html-language-server"]
+
 [language-server.gopls]
 command = "gopls"
 args = ["-logfile=auto",  "serve"]
