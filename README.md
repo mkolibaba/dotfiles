@@ -6,6 +6,3 @@ Initialize on Windows:
 ```powershell
 Invoke-RestMethod -Uri https://raw.githubusercontent.com/mkolibaba/dotfiles/main/init.ps1 | Invoke-Expression
 ```
-
-## TODO
-- Goland & IntelliJ configs & installation
