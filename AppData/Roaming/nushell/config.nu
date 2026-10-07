@@ -2,12 +2,15 @@
 $env.config.show_banner = false
 $env.config.buffer_editor = "hx"
 $env.Path = ($env.Path | prepend r#'~\AppData\Local\mise\shims'#) # mise activate nu --shims
+$env.BAT_THEME = "Dracula"
+$env.DFT_WIDTH = 150
+# $env.config.edit_mode = helix
 
 # Aliases
 alias cm = chezmoi
 alias cma = chezmoi apply
 alias cme = chezmoi edit
-alias e = hx (fzf --preview "open --raw {}")
+alias e = hx (fzf --preview "bat --color=always --style=numbers --line-range=:500 {}")
 
 # Print custom banner
 print $"Nushell (version | get version)"

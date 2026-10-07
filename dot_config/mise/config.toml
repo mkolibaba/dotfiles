@@ -2,12 +2,9 @@
 go = "latest"
 golangci-lint = "latest"
 golangci-lint-langserver = "latest"
-gsudo = "latest"
 node = "latest"
-npm = "latest"
 python = "latest"
 tombi = "latest"
-zoxide = { version = "latest", postinstall = "zoxide init nushell | save -f ($nu.data-dir | path join vendor autoload zoxide.nu)" }
 
 [env]
 _.file = "~/.config/mise/secret.env"
@@ -57,27 +54,35 @@ $vsCodeExtensions | each { |e|
 [bootstrap.packages]
 "scoop:atuin" = "latest"
 "scoop:bat" = "latest"
+"scoop:bitwarden-cli" = "latest"
 "scoop:charm-gum" = "latest"
 "scoop:crush" = "latest"
 "scoop:difftastic" = "latest"
+"scoop:delta" = "latest"
 "scoop:dua" = "latest"
 "scoop:extras/age" = "latest"
 "scoop:extras/carapace-bin" = "latest"
 "scoop:fnox" = "latest"
 "scoop:fzf" = "latest"
 "scoop:glow" = "latest"
+"scoop:gsudo" = "latest"
 "scoop:helix" = "latest"
 "scoop:herdr" = "latest"
 "scoop:hunk" = "latest"
 "scoop:nerd-fonts/FiraCode-NF" = "latest"
 "scoop:nerd-fonts/JetBrainsMono-NF" = "latest"
+"scoop:nu" = "latest"
 "scoop:oh-my-posh" = "latest"
 "scoop:ripgrep" = "latest"
 "scoop:sd" = "latest"
 "scoop:sops" = "latest"
 "scoop:yazi" = "latest"
 "scoop:zellij" = "latest"
+"scoop:zoxide" = "latest"
+"winget:Docker.DockerDesktop" = "latest"
 "winget:Fork.Fork" = "latest"
+"winget:Microsoft.PowerShell" = "latest"
+"winget:Microsoft.PowerToys" = "latest"
 "winget:Microsoft.VisualStudioCode" = "latest"
 "winget:voidtools.Everything" = "latest"
 
@@ -100,14 +105,30 @@ oh-my-posh init nu --config ~/.config/oh-my-posh/themes/mkolibaba.omp.yaml
 
 mkdir ~/.local/share/atuin
 atuin init nu | save -f ~/.local/share/atuin/init.nu   
+
+zoxide init nushell | save -f ($nu.data-dir | path join vendor autoload zoxide.nu)
+
+go install golang.org/x/tools/gopls@latest
+go install golang.org/x/tools/cmd/goimports@latest
 '''
 
 [bootstrap.services.mise-history]
 builtin = "history-watch"
 
+[history.encryption]
+recipients = [
+    "age1ak2dnmzaezr8l53cj42whpe6zlqadg0ygdwtylhkd3e5xdewfvqsrtrfrk", # laptop
+    "age15a2mrqapxjntfmm58fsjrpn97r8fd3ryjmh3mvgjrk27my2yquxs3e6etc"  # home pc
+]
+
 [settings]
 env_cache = true
 env_cache_ttl = "72h"
+# TODO: убрать, когда перейду с chezmoi на mise
+age.identity_files = [
+    "~/.config/mise/age.txt",
+    "~/.config/chezmoi/key.txt"
+]
 windows_default_file_shell_args = "nu"
 windows_default_inline_shell_args = "nu -c"
 
@@ -115,10 +136,19 @@ windows_default_inline_shell_args = "nu -c"
 "~/.config/crush/crushrc" = { mode = "track" }
 "~/.config/fnox/config.toml" = { mode = "track" }
 "~/.config/mise/config.toml" = { mode = "track" }
+"~/.config/mise/config.work.toml" = { mode = "track" }
+"~/.config/mise/secret.env" = { mode = "track", encrypt = true }
 "~/.config/oh-my-posh/themes/mkolibaba.omp.yaml" = { mode = "track" }
+"~/.config/sops/age/keys.txt" = { mode = "track", encrypt = true }
+"~/.gitconfig" = { mode = "track" }
+"~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/favicon-nushell.png" = { mode = "track" }
 "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/favicon-zellij.ico" = { mode = "track" }
 "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json" = { mode = "track" }
 "~/AppData/Roaming/Code/User/settings.json" = { mode = "track" }
+"~/AppData/Roaming/Zellij/config/config.kdl" = { mode = "track" }
 "~/AppData/Roaming/helix/config.toml" = { mode = "track" }
 "~/AppData/Roaming/helix/languages.toml" = { mode = "track" }
 "~/AppData/Roaming/herdr/config.toml" = { mode = "track" }
+"~/AppData/Roaming/nushell/config.nu" = { mode = "track" }
+"~/projects/lenta/.gitconfig" = { mode = "track", encrypt = true }
+"~/yaak/lenta" = { mode = "track", encrypt = true }
