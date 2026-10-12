@@ -23,7 +23,7 @@ mkdir $autoload_dir
 mise activate nu | save -f ($autoload_dir | path join "mise.nu")
 
 # TODO: can it be autoloaded?
-source $"($nu.cache-dir)/carapace.nu"
+# source $"($nu.cache-dir)/carapace.nu"
 # TODO: значительно замедляет промпт. попробовать починить
 # source ~/.local/share/atuin/init.nu
 
