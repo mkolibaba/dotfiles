@@ -60,7 +60,6 @@ $vsCodeExtensions | each { |e|
 "scoop:delta" = "latest"
 "scoop:dua" = "latest"
 "scoop:extras/age" = "latest"
-"scoop:extras/carapace-bin" = "latest"
 "scoop:fnox" = "latest"
 "scoop:fzf" = "latest"
 "scoop:glow" = "latest"
