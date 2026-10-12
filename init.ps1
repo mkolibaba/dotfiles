@@ -15,31 +15,5 @@ if (!(Get-Command scoop -ErrorAction SilentlyContinue)) {
 # 3. Install chezmoi via Scoop
 scoop install chezmoi
 
-# 4. Prompt the user for the key or file path
-$ageIdentity = Read-Host "Enter age identity file location OR the key itself"
-
-# Define destination paths using platform-agnostic constants
-$chezmoiConfigDir = Join-Path $HOME ".config\chezmoi"
-$keyPath = Join-Path $chezmoiConfigDir "key.txt"
-
-# Ensure the destination directory exists before writing the file
-if (!(Test-Path $chezmoiConfigDir)) {
-    New-Item -ItemType Directory -Path $chezmoiConfigDir -Force | Out-Null
-}
-
-# 5. Robust input validation logic
-# Check if the input points to an existing file on the disk
-if (Test-Path $ageIdentity -PathType Leaf) {
-    # If it's a file, read its content and save it to key.txt
-    Get-Content -Path $ageIdentity -Raw | Out-File -FilePath $keyPath -Encoding utf8
-    Write-Host "Key successfully copied from file to $keyPath" -ForegroundColor Green
-} 
-# Check if the input points to a directory (user error)
-elseif (Test-Path $ageIdentity -PathType Container) {
-    Throw "The specified path is a directory, not a key file!"
-} 
-# Treat the input strictly as a plaintext string key if no physical file matches
-else {
-    $ageIdentity | Out-File -FilePath $keyPath -Encoding utf8
-    Write-Host "Plaintext key successfully written to $keyPath" -ForegroundColor Green
-}
+# 4. Run chezmoi
+chezmoi init --apply mkolibaba
