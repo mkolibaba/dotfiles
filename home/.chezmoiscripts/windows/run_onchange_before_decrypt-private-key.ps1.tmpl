@@ -8,15 +8,4 @@ if (!(Test-Path $keyPath -PathType Leaf)) {
     }
 
     chezmoi age decrypt --output $keyPath --passphrase $ageFile
-
-    # Windows ACL equivalent to chmod 600 (Strictly Owner Access)
-    $currentUser = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
-    $acl = Get-Acl -Path $keyPath
-    $acl.SetAccessRuleProtection($true, $false)
-    $acl.Access | Where-Object { $_.IdentityReference -ne $currentUser } | ForEach-Object {
-        $acl.RemoveAccessRule($_) | Out-Null
-    }
-    $accessRule = New-Object System.Security.AccessControl.FileSystemAccessRule($currentUser, "FullControl", "Allow")
-    $acl.SetAccessRule($accessRule)
-    Set-Acl -Path $keyPath -AclObject $acl
 }
