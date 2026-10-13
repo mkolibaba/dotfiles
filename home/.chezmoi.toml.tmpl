@@ -19,7 +19,7 @@ args = [
 command = "nu"
 args = [
   "-c",
-  "cp {{ `{{ .Target }}` }} {{ `{{ .Target }}` }}.base && code --wait --new-window --merge {{ `{{ .Destination }}` }} {{ `{{ .Target  }}` }} {{ `{{ .Target }}` }}.base {{ `{{ .Source }}` }}"
+  "cp {{ `{{ .Target }}` }} {{ `{{ .Target }}` }}.base ; code --wait --new-window --merge {{ `{{ .Destination }}` }} {{ `{{ .Target  }}` }} {{ `{{ .Target }}` }}.base {{ `{{ .Source }}` }}"
 ]
 
 [hooks.apply.post]
