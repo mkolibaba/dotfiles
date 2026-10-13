@@ -15,6 +15,9 @@ args = [
   "--skip-unchanged"
 ]
 
+[merge]
+command = "difft"
+
 [hooks.apply.post]
 command = "mise"
 args = ["install"]
