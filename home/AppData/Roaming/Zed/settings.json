@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_font_weight": 500.0,
+  "buffer_line_height": "standard",
+  "buffer_font_family": "FiraCode Nerd Font",
   "git_panel": {
     "tree_view": false
   },
@@ -35,7 +38,7 @@
     "font_family": "FiraCode Nerd Font"
   },
   "ui_font_size": 16.0,
-  "buffer_font_size": 15,
+  "buffer_font_size": 16.0,
   "theme": {
     "mode": "system",
     "light": "One Light",
