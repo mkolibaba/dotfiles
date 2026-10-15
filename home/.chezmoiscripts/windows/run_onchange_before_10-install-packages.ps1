@@ -2,7 +2,6 @@ scoop update
 
 scoop bucket add charm https://github.com/charmbracelet/scoop-bucket.git
 
-scoop install atuin
 scoop install bat
 scoop install charm-gum
 scoop install crush
