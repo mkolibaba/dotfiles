@@ -11,31 +11,31 @@
   "buffer_line_height": "standard",
   "buffer_font_family": "FiraCode Nerd Font",
   "git_panel": {
-    "tree_view": false
+    "tree_view": false,
   },
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000
-    }
+      "milliseconds": 1000,
+    },
   },
   "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "left",
-    "button": true
+    "button": true,
   },
   "helix_mode": true,
   "icon_theme": "Colored Zed Icons Theme Dark",
   "cursor_animation": {
-    "enabled": false
+    "enabled": false,
   },
   "cursor_blink": false,
   "cursor_shape": "block",
   "ui_font_family": "JetBrainsMono Nerd Font",
   "terminal": {
     "shell": {
-      "program": "nu.exe"
+      "program": "nu.exe",
     },
-    "font_family": "FiraCode Nerd Font"
+    "font_family": "FiraCode Nerd Font",
   },
   "ui_font_size": 16.0,
   "buffer_font_size": 16.0,
@@ -43,5 +43,15 @@
     "mode": "system",
     "light": "One Light",
     "dark": "Dracula",
+  },
+  "auto_install_extensions": {
+    "colored-zed-icons-theme": true,
+    "dracula": true,
+    "gotmpl": true,
+    "html": true,
+    "material-icon-theme": true,
+    "nu": true,
+    "powershell": true,
+    "toml": true,
   },
 }
