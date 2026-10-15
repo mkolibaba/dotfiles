@@ -17,16 +17,6 @@ alias e = hx (fzf --preview "bat --color=always --style=numbers --line-range=:50
 print $"Nushell (version | get version)"
 let $start_date = date now
 
-# Autoload
-const autoload_dir = $nu.data-dir | path join "vendor" "autoload"
-mkdir $autoload_dir
-mise activate nu | save -f ($autoload_dir | path join "mise.nu")
-
-# TODO: can it be autoloaded?
-# source $"($nu.cache-dir)/carapace.nu"
-# TODO: значительно замедляет промпт. попробовать починить
-# source ~/.local/share/atuin/init.nu
-
 print $"Loading personal and system profiles took (((date now) - $start_date) | format duration ms)."
 
 # Git
@@ -60,7 +50,7 @@ def search-replace [
 def --env refreshenv [] {
     let user_path = registry query --hkcu environment | where name == Path | get value | split row ';' |
          where { |x| $x != '' }
-    let sys_path = registry query --hklm 'SYSTEM\CurrentControlSet\Control\Session Manager\Environment' | where name == Path | get value | 
+    let sys_path = registry query --hklm 'SYSTEM\CurrentControlSet\Control\Session Manager\Environment' | where name == Path | get value |
         split row ';' | where { |x| $x != '' }
 
     let out = $user_path ++ $sys_path ++ $env.path | uniq --ignore-case
