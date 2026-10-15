@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "left",
     "button": true
@@ -20,6 +26,9 @@
   "cursor_shape": "block",
   "ui_font_family": "JetBrainsMono Nerd Font",
   "terminal": {
+    "shell": {
+      "program": "nu.exe"
+    },
     "font_family": "FiraCode Nerd Font"
   },
   "ui_font_size": 16.0,
