@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "dock": "left",
+    "button": true
+  },
+  "helix_mode": true,
   "icon_theme": "Colored Zed Icons Theme Dark",
   "cursor_animation": {
     "enabled": false
