@@ -26,6 +26,7 @@ scoop install yazi
 scoop install zellij
 scoop install zoxide
 
+winget install DevToys-app.DevToys
 winget install Docker.DockerDesktop
 winget install Fork.Fork
 winget install Microsoft.PowerShell
