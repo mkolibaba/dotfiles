@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "vertical_scroll_margin": 3.0,
+  "relative_line_numbers": "enabled",
   "buffer_font_weight": 500.0,
   "buffer_line_height": "standard",
   "buffer_font_family": "FiraCode Nerd Font",
