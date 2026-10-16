@@ -32,3 +32,4 @@ winget install Microsoft.PowerShell
 winget install Microsoft.PowerToys
 winget install Microsoft.VisualStudioCode
 winget install voidtools.Everything
+winget install Zen-Team.Zen-Browser
