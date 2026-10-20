@@ -5,7 +5,7 @@ $env.config.table.mode = "frameless"
 $env.Path = ($env.Path | prepend r#'~\AppData\Local\mise\shims'#) # mise activate nu --shims
 $env.BAT_THEME = "Dracula"
 $env.DFT_WIDTH = 150
-# $env.config.edit_mode = helix
+$env.config.edit_mode = "helix"
 
 # Aliases
 alias cm = chezmoi
