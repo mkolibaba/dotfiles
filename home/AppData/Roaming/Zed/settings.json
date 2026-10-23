@@ -7,6 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "which_key": {
+    "enabled": true
+  },
+  "inlay_hints": {
+    "enabled": false
+  },
+  "base_keymap": "JetBrains",
   "diff_view_style": "split",
   "vertical_scroll_margin": 3.0,
   "relative_line_numbers": "enabled",
