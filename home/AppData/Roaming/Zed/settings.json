@@ -7,6 +7,25 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "git": {
+    "diff_base": "head"
+  },
+  "agent": {
+    "single_file_review": true,
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "agent_servers": {
+    "codex-acp": {
+      "default_config_options": {
+        "fast-mode": false,
+        "reasoning_effort": "medium"
+      },
+      "type": "registry"
+    }
+  },
+  "code_lens": "off",
   "which_key": {
     "enabled": true
   },
