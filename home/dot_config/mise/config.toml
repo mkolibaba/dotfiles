@@ -3,7 +3,6 @@ go = "latest"
 golangci-lint = "latest"
 golangci-lint-langserver = "latest"
 node = "latest"
-"npm:@openai/codex" = "latest"
 python = "latest"
 tombi = "latest"
 

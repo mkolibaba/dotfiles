@@ -4,9 +4,10 @@ scoop bucket add charm https://github.com/charmbracelet/scoop-bucket.git
 
 scoop install bat
 scoop install charm-gum
+scoop install codex
 scoop install crush
-scoop install difftastic
 scoop install delta
+scoop install difftastic
 scoop install dua
 scoop install extras/age
 scoop install fzf
